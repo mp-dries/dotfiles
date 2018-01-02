@@ -2,6 +2,7 @@
 
 ### Set directory to repo path
 DOTDIR="$(pwd)"
+# add absolute dotdir to beginning of zshrc
 
 ### Check requirements
 
