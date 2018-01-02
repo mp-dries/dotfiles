@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ### Set directory to repo path
-BASEDIR="$(pwd)"
+DOTDIR="$(pwd)"
 
 ### Check requirements
 
