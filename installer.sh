@@ -34,7 +34,7 @@ fi
 ### Make symlinks
 
 # ZSH
-ln -s ${BASEDIR}/zshrc $HOME/.zshrc
+ln -s ${BASEDIR}/conf/zshrc.conf $HOME/.zshrc
 if [ $? -eq 0 ]; then
     /usr/bin/printf "\xE2\x9C\x94 Created ZSH symlink"
 else
@@ -42,7 +42,7 @@ else
 fi
 
 # VIM
-ln -s ${BASEDIR}/vimrc $HOME/.vimrc
+ln -s ${BASEDIR}/conf/vimrc.conf $HOME/.vimrc
 if [ $? -eq 0 ]; then
     /usr/bin/printf "\xE2\x9C\x94 Created VIMRC symlink"
 else
@@ -50,7 +50,7 @@ else
     rm $HOME/.zshrc
     exit 1
 fi
-ln -s ${BASEDIR}/vim/ $HOME/.vim
+ln -s ${BASEDIR}/conf/vim/ $HOME/.vim
 if [ $? -eq 0 ]; then
     /usr/bin/printf "\xE2\x9C\x94 Created VIM symlink"
 else
@@ -61,7 +61,7 @@ else
 fi
 
 # GIT
-ln -s ${BASEDIR}/gitconfig $HOME/.gitconfig
+ln -s ${BASEDIR}/conf/gitconfig.conf $HOME/.gitconfig
 if [ $? -eq 0 ]; then
     /usr/bin/printf "\xE2\x9C\x94 Created GIT symlink"
 else
