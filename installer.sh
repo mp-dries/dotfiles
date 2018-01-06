@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-### Set directory to repo path
-DOTDIR="$(pwd)"
-# TODO: add absolute dotdir to beginning of zshrc
+### Go to current directory
+cd "$(dirname "$0")"
 
 ### Check requirements
 
@@ -34,7 +33,7 @@ fi
 ### Make symlinks
 
 # ZSH
-ln -s ${BASEDIR}/conf/zshrc.conf $HOME/.zshrc
+ln -s $(pwd)/conf/zshrc.conf $HOME/.zshrc
 if [ $? -eq 0 ]; then
     /usr/bin/printf "\xE2\x9C\x94 Created ZSH symlink"
 else
@@ -42,7 +41,7 @@ else
 fi
 
 # VIM
-ln -s ${BASEDIR}/conf/vimrc.conf $HOME/.vimrc
+ln -s $(pwd)/conf/vimrc.conf $HOME/.vimrc
 if [ $? -eq 0 ]; then
     /usr/bin/printf "\xE2\x9C\x94 Created VIMRC symlink"
 else
@@ -50,7 +49,7 @@ else
     rm $HOME/.zshrc
     exit 1
 fi
-ln -s ${BASEDIR}/conf/vim/ $HOME/.vim
+ln -s $(pwd)/conf/vim/ $HOME/.vim
 if [ $? -eq 0 ]; then
     /usr/bin/printf "\xE2\x9C\x94 Created VIM symlink"
 else
@@ -61,7 +60,7 @@ else
 fi
 
 # GIT
-ln -s ${BASEDIR}/conf/gitconfig.conf $HOME/.gitconfig
+ln -s $(pwd)/conf/gitconfig.conf $HOME/.gitconfig
 if [ $? -eq 0 ]; then
     /usr/bin/printf "\xE2\x9C\x94 Created GIT symlink"
 else
