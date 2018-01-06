@@ -3,7 +3,7 @@
 ### Go to current directory
 cd $HOME
 
-git clone https://github.com/drieshooghe/dotfiles.git
+git clone https://github.com/drieshooghe/dotfiles.git $HOME/.dotfiles
 
 ### Check requirements
 
