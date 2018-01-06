@@ -5,6 +5,7 @@ cd $HOME
 
 git clone https://github.com/drieshooghe/dotfiles.git $HOME/.dotfiles
 
+
 ### Check requirements
 
 # ZSH
@@ -25,12 +26,6 @@ if [[ ! $(which git) ]]; then
     exit 1
 fi
 
-# .ENV
-if [[ ! -f ./.env ]]; then
-    echo ".env file not found!"
-    echo "run \"cp .env.default .env\""
-    exit 1
-fi
 
 ### Make symlinks
 
