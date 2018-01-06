@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 ### Go to current directory
-cd "$(dirname "$0")"
+cd $HOME
+
+git clone https://github.com/drieshooghe/dotfiles.git
 
 ### Check requirements
 
