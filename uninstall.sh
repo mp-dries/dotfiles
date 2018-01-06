@@ -23,4 +23,6 @@ if [ "$(readlink -- "$HOME/.gitconfig")" = ${HOME}/.dotfiles/conf/gitconfig.conf
 fi
 
 # Remove this script and directory
-rm $0 && rmdir `dirname $0`
+if [[ -d $HOME/.dotfiles ]]; then
+    rm -rf $HOME/.dotfiles
+fi
