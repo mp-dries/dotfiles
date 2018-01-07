@@ -14,7 +14,7 @@ fi
 
 # .VIM
 if [ "$(readlink -- "$HOME/.vim")" = ${HOME}/.dotfiles/conf/gitconfig.conf ]; then
-    rm -R $HOME/.vim
+    rm -R $HOME/.vim/
 fi
 
 # .GITCONFIG
