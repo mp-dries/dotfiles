@@ -66,15 +66,3 @@ else
     rm $HOME/.vimrc
     rm -R $HOME/.vim
 fi
-
-# ALIASES
-ln -s $(pwd)/.dotfiles/conf/aliases.conf $HOME/.aliases
-if [ $? -eq 0 ]; then
-    /usr/bin/printf "\xE2\x9C\x94 Created aliases symlink"
-else
-    echo "Could not create aliases symlink! Aborting..."
-    rm $HOME/.zshrc
-    rm $HOME/.vimrc
-    rm $HOME/.gitconfig
-    rm -R $HOME/.vim
-fi

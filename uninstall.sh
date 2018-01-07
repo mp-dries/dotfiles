@@ -12,19 +12,14 @@ if [ "$(readlink -- "$HOME/.vimrc")" = ${HOME}/.dotfiles/conf/vimrc.conf ]; then
     rm -R $HOME/.vimrc
 fi
 
-# .ALIASES
-if [ "$(readlink -- "$HOME/.aliases")" = ${HOME}/.dotfiles/conf/aliases.conf ]; then
-    rm -R $HOME/.aliases
+# .VIM
+if [ "$(readlink -- "$HOME/.vim")" = ${HOME}/.dotfiles/conf/gitconfig.conf ]; then
+    rm -R $HOME/.vim/
 fi
 
 # .GITCONFIG
 if [ "$(readlink -- "$HOME/.gitconfig")" = ${HOME}/.dotfiles/conf/gitconfig.conf ]; then
     rm -R $HOME/.gitconfig
-fi
-
-# .VIM
-if [ "$(readlink -- "$HOME/.vim")" = ${HOME}/.dotfiles/conf/gitconfig.conf ]; then
-    rm -R $HOME/.vim/
 fi
 
 # Remove this script and directory
