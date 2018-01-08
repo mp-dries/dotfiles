@@ -127,7 +127,7 @@ if [[ ! $(which go) ]]; then
     echo "Downloading GOLANG installer..."
     echo
 
-    curl -so /tmp/go.tar.gz https://storage.googleapis.com/golang/https://storage.googleapis.com/golang/${DFILE}
+    curl -SL https://storage.googleapis.com/golang/$DFILE -o /tmp/go.tar.gz
     if [ $? -ne 0 ]; then
         echo "Download failed! Aborting..."
         exit 1
