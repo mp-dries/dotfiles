@@ -49,6 +49,14 @@ if [ "$(readlink -- "$HOME/.gitconfig")" = ${HOME}/.tomes/conf/gitconfig.conf ];
     fi
 fi
 
+# Ask if Go must be removed
+read -p "Do you wish to uninstall Go? (y/n) " UNINSTALLGO
+
+if [[ "UNINSTALLGO" = "y" ]]; then
+  rm -rf "$HOME/.go/"
+fi
+
+
 # Remove this script and directory
 if [[ -d $HOME/.tomes ]]; then
     rm -rf $HOME/.tomes
