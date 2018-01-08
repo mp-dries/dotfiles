@@ -98,7 +98,7 @@ if [[ ! $(which go) ]]; then
 
     read -p "Do you wish to install Go? (y/n) " INSTALLGO
 
-    if [[ ! "INSTALLGO" = "y" ]]; then
+    if [[ ! ${INSTALLGO} == "y" ]]; then
       exit 1
     fi
 
