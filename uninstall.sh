@@ -30,7 +30,7 @@ if [ "$(readlink -- "$HOME/.vimrc")" = ${HOME}/.tomes/conf/vimrc.conf ]; then
 fi
 
 # .VIM
-if [ "$(readlink -- "$HOME/.vim")" = ${HOME}/.tomes/conf/vim/ ]; then
+if [[ "$(readlink -- "$HOME/.vim")" = ${HOME}/.tomes/conf/vim/ ]]; then
     rm -R $HOME/.vim
     if [ $? -eq 0 ]; then
         echo $(tput setaf ${GRE}) " -> Deleted VIM symlink"
@@ -40,7 +40,7 @@ if [ "$(readlink -- "$HOME/.vim")" = ${HOME}/.tomes/conf/vim/ ]; then
 fi
 
 # .GITCONFIG
-if [ "$(readlink -- "$HOME/.gitconfig")" = ${HOME}/.tomes/conf/gitconfig.conf ]; then
+if [[ "$(readlink -- "$HOME/.gitconfig")" = ${HOME}/.tomes/conf/gitconfig.conf ]]; then
     rm -R $HOME/.gitconfig
     if [ $? -eq 0 ]; then
         echo $(tput setaf ${GRE}) " -> Deleted GITCONFIG symlink"
@@ -53,7 +53,7 @@ fi
 tput setaf ${WHI}
 read -p "Do you wish to uninstall Go? (y/n) " UNINSTALLGO
 
-if [[ "UNINSTALLGO" = "y" ]]; then
+if [[ "UNINSTALLGO" == "y" ]]; then
     KERNEL=$(uname -s)
     rm -rf "$HOME/.go/"
     rm -rf "/usr/local/go"
@@ -62,7 +62,7 @@ if [[ "UNINSTALLGO" = "y" ]]; then
         rm -f /etc/paths.d/go
     fi
 
-    if [ $? -eq 0 ]; then
+    if [[ $? -eq 0 ]]; then
         echo $(tput setaf ${GRE}) " -> Uninstalled Go"
     else
         echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not remove $HOME/.go/!"
@@ -73,7 +73,7 @@ fi
 # Remove this script and directory
 if [[ -d $HOME/.tomes ]]; then
     rm -rf $HOME/.tomes
-    if [ $? -eq 0 ]; then
+    if [[ $? -eq 0 ]]; then
         echo $(tput setaf ${GRE}) " -> Deleted tomes directory"
     else
         echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not delete the tomes directory!"
