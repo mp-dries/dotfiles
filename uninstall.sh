@@ -5,6 +5,10 @@
 # Color variables
 RED=1 GRE=2 WHI=7
 
+echo
+echo "Creating the necessary symlinks..."
+echo
+
 # .ZSHRC
 if [ "$(readlink -- "$HOME/.zshrc")" = ${HOME}/.tomes/conf/zshrc.conf ]; then
     rm -R $HOME/.zshrc
