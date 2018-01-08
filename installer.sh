@@ -41,9 +41,10 @@ fi
 # ZSH
 ln -s $(pwd)/.tomes/conf/zshrc.conf $HOME/.zshrc
 if [ $? -eq 0 ]; then
-     "\xE2\x9C\x94 Created ZSH symlink"
+    echo $(tput setaf ${GRE}) " -> Created ZSHRC symlink"
 else
-    echo "Could not create ZSH symlink! Aborting..."
+    echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not create ZSHRC symlink! Aborting..."
+    exit 1
 fi
 
 # VIM
