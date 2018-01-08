@@ -143,14 +143,14 @@ if [[ ! $(which go) ]]; then
         exit 1
     fi
 
-    mv "$HOME/go" "/usr/local/go"
+    sudo mv "$HOME/go" "/usr/local/go"
     if [ $? -ne 0 ]; then
         echo "Could not move Go directory! Aborting..."
         exit 1
     fi
 
 
-    mkdir -p $HOME/.go/{bin,src,pkg}
+    mkdir -p $HOME/go/{bin,src,pkg}
     if [ $? -ne 0 ]; then
         echo "Making Go directories failed! Aborting..."
         exit 1
