@@ -59,7 +59,7 @@ if [[ ${UNINSTALLGO} == "y" ]]; then
     sudo rm -rf "/usr/local/go"
 
     if [[ ${KERNEL} == 'Darwin' ]]; then
-        rm -f /etc/paths.d/go
+        sudo rm -f /etc/paths.d/go
     fi
 
     if [[ $? -eq 0 ]]; then
