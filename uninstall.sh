@@ -50,10 +50,16 @@ if [ "$(readlink -- "$HOME/.gitconfig")" = ${HOME}/.tomes/conf/gitconfig.conf ];
 fi
 
 # Ask if Go must be removed
+tput setaf ${WHI}
 read -p "Do you wish to uninstall Go? (y/n) " UNINSTALLGO
 
 if [[ "UNINSTALLGO" = "y" ]]; then
   rm -rf "$HOME/.go/"
+    if [ $? -eq 0 ]; then
+        echo $(tput setaf ${GRE}) " -> Uninstalled Go"
+    else
+        echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not remove $HOME/.go/!"
+    fi
 fi
 
 
