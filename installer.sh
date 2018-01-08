@@ -92,7 +92,7 @@ fi
 
 ### Install GOLANG
 
-if [[ ! $(which tput) ]]; then
+if [[ ! $(which go) ]]; then
 
     echo "A lot of the scripts included in this package require Go, which doesn't seem to be installed."
 
