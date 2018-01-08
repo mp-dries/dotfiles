@@ -137,7 +137,7 @@ if [[ ! $(which go) ]]; then
     echo "Extracting GOLANG..."
     echo
 
-    tar -C "$HOME" -xzf /tmp/go.tar.gz
+    tar -CL "$HOME" -xzf /tmp/go.tar.gz
     if [ $? -ne 0 ]; then
         echo "Extracting /tmp/go.tar.gz failed! Aborting..."
         exit 1
