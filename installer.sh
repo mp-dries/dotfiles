@@ -137,13 +137,13 @@ if [[ ! $(which go) ]]; then
     echo "Extracting GOLANG..."
     echo
     
-    sudo tar -C /usr/local -xzf /tmp/go.tar.gz
+    tar -C "$HOME" -xzf /tmp/go.tar.gz
     if [ $? -ne 0 ]; then
         echo "Extracting /tmp/go.tar.gz failed! Aborting..."
         exit 1
     fi
 
-    mv "$HOME/go" "$HOME/.go"
+    mv "$HOME/go" "/usr/local/go"
     if [ $? -ne 0 ]; then
         echo "Could not move Go directory! Aborting..."
         exit 1
