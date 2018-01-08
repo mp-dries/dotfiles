@@ -1,28 +1,28 @@
 #!/usr/bin/env bash
 
-# remove symlinks to the dotfiles package
+# remove symlinks to the tomes package
 
 # .ZSHRC
-if [ "$(readlink -- "$HOME/.zshrc")" = ${HOME}/.dotfiles/conf/zshrc.conf ]; then
+if [ "$(readlink -- "$HOME/.zshrc")" = ${HOME}/.tomes/conf/zshrc.conf ]; then
     rm -R $HOME/.zshrc
 fi
 
 # .VIMRC
-if [ "$(readlink -- "$HOME/.vimrc")" = ${HOME}/.dotfiles/conf/vimrc.conf ]; then
+if [ "$(readlink -- "$HOME/.vimrc")" = ${HOME}/.tomes/conf/vimrc.conf ]; then
     rm -R $HOME/.vimrc
 fi
 
 # .VIM
-if [ "$(readlink -- "$HOME/.vim")" = ${HOME}/.dotfiles/conf/gitconfig.conf ]; then
+if [ "$(readlink -- "$HOME/.vim")" = ${HOME}/.tomes/conf/gitconfig.conf ]; then
     rm -R $HOME/.vim/
 fi
 
 # .GITCONFIG
-if [ "$(readlink -- "$HOME/.gitconfig")" = ${HOME}/.dotfiles/conf/gitconfig.conf ]; then
+if [ "$(readlink -- "$HOME/.gitconfig")" = ${HOME}/.tomes/conf/gitconfig.conf ]; then
     rm -R $HOME/.gitconfig
 fi
 
 # Remove this script and directory
-if [[ -d $HOME/.dotfiles ]]; then
-    rm -rf $HOME/.dotfiles
+if [[ -d $HOME/.tomes ]]; then
+    rm -rf $HOME/.tomes
 fi
