@@ -53,7 +53,7 @@ fi
 tput setaf ${WHI}
 read -p "Do you wish to uninstall Go? (y/n) " UNINSTALLGO
 
-if [[ "UNINSTALLGO" == "y" ]]; then
+if [[ "${UNINSTALLGO}" == "y" ]]; then
     KERNEL=$(uname -s)
     rm -rf "$HOME/.go/"
     rm -rf "/usr/local/go"
