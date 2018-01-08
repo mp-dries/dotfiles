@@ -48,4 +48,10 @@ fi
 # Remove this script and directory
 if [[ -d $HOME/.tomes ]]; then
     rm -rf $HOME/.tomes
+        if [ $? -eq 0 ]; then
+        echo $(tput setaf ${GRE}) " -> Deleted tomes directory"
+    else
+        echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not delete the tomes directory!"
+    fi
+    cd $HOME
 fi
