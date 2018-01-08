@@ -106,9 +106,9 @@ if [[ ! $(which go) ]]; then
     MACHINE_TYPE=$(uname -m)
     KERNEL=$(uname -s)
     if [[ ${MACHINE_TYPE} == 'x86_64' ]]; then
-            if [[ ${MACHINE_TYPE} == 'Linux' ]]; then
+            if [[ ${KERNEL} == 'Linux' ]]; then
                 DFILE="go${GOLANGVERSION}.linux-amd64.tar.gz"
-            elif [[ ${MACHINE_TYPE} == 'x86_64' ]]; then
+            elif [[ ${KERNEL} == 'Darwin' ]]; then
                 DFILE="go${GOLANGVERSION}.darwin-amd64.tar.gz"
             fi
     elif [[ ${MACHINE_TYPE} == 'i386' ]]; then

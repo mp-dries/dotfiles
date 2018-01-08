@@ -54,7 +54,14 @@ tput setaf ${WHI}
 read -p "Do you wish to uninstall Go? (y/n) " UNINSTALLGO
 
 if [[ "UNINSTALLGO" = "y" ]]; then
-  rm -rf "$HOME/.go/"
+    KERNEL=$(uname -s)
+    rm -rf "$HOME/.go/"
+    rm -rf "/usr/local/go"
+
+    if [[ ${KERNEL} == 'Darwin' ]]; then
+        rm -f /etc/paths.d/go
+    fi
+
     if [ $? -eq 0 ]; then
         echo $(tput setaf ${GRE}) " -> Uninstalled Go"
     else
@@ -66,7 +73,7 @@ fi
 # Remove this script and directory
 if [[ -d $HOME/.tomes ]]; then
     rm -rf $HOME/.tomes
-        if [ $? -eq 0 ]; then
+    if [ $? -eq 0 ]; then
         echo $(tput setaf ${GRE}) " -> Deleted tomes directory"
     else
         echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not delete the tomes directory!"
