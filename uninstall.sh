@@ -6,7 +6,7 @@
 RED=1 GRE=2 WHI=7
 
 echo
-echo "Creating the necessary symlinks..."
+echo "Deleting symlinks..."
 echo
 
 # .ZSHRC
