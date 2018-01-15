@@ -18,3 +18,6 @@
 ;; set theme
 (load-theme 'monokai t)
 
+;; enable the line-numbers-bar and add a space
+(global-linum-mode 1)
+(setq linum-format "%3d \u2502 ")
