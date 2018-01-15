@@ -11,7 +11,7 @@ echo
 
 # .ZSHRC
 if [ "$(readlink -- "$HOME/.zshrc")" = ${HOME}/.tomes/conf/zshrc.conf ]; then
-    rm -R $HOME/.zshrc
+    rm $HOME/.zshrc
     if [ $? -eq 0 ]; then
         echo $(tput setaf ${GRE}) " -> Deleted ZSHRC symlink"
     else
@@ -21,7 +21,7 @@ fi
 
 # EMACS
 if [[ "$(readlink -- "$HOME/.emacs.d")" = ${HOME}/.tomes/conf/emacs/ ]]; then
-    rm -R $HOME/.emacs.d/
+    rm $HOME/.emacs.d
     if [ $? -eq 0 ]; then
         echo $(tput setaf ${GRE}) " -> Deleted EMACS symlink"
     else
@@ -31,7 +31,7 @@ fi
 
 # .GITCONFIG
 if [[ "$(readlink -- "$HOME/.gitconfig")" = ${HOME}/.tomes/conf/gitconfig.conf ]]; then
-    rm -R $HOME/.gitconfig
+    rm $HOME/.gitconfig
     if [ $? -eq 0 ]; then
         echo $(tput setaf ${GRE}) " -> Deleted GITCONFIG symlink"
     else
