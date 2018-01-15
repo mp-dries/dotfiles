@@ -19,23 +19,13 @@ if [ "$(readlink -- "$HOME/.zshrc")" = ${HOME}/.tomes/conf/zshrc.conf ]; then
     fi
 fi
 
-# .VIMRC
-if [ "$(readlink -- "$HOME/.vimrc")" = ${HOME}/.tomes/conf/vimrc.conf ]; then
-    rm -R $HOME/.vimrc
+# EMACS
+if [[ "$(readlink -- "$HOME/.emacs.d")" = ${HOME}/.tomes/conf/emacs/ ]]; then
+    rm -R $HOME/.emacs.d/
     if [ $? -eq 0 ]; then
-        echo $(tput setaf ${GRE}) " -> Deleted VIMRC symlink"
+        echo $(tput setaf ${GRE}) " -> Deleted EMACS symlink"
     else
-        echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not delete VIMRC symlink!"
-    fi
-fi
-
-# .VIM
-if [[ "$(readlink -- "$HOME/.vim")" = ${HOME}/.tomes/conf/vim/ ]]; then
-    rm -R $HOME/.vim
-    if [ $? -eq 0 ]; then
-        echo $(tput setaf ${GRE}) " -> Deleted VIM symlink"
-    else
-        echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not delete VIM symlink!"
+        echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not delete EMACS symlink!"
     fi
 fi
 

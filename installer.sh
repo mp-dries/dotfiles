@@ -32,9 +32,9 @@ if [[ ! $(which zsh) ]]; then
     exit 1
 fi
 
-# VIM
-if [[ ! $(which vim) ]]; then
-    echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "VIM must be installed"
+# EMACS
+if [[ ! $(which emacs) ]]; then
+    echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "EMACS must be installed"
     exit 1
 fi
 
@@ -60,22 +60,13 @@ else
     exit 1
 fi
 
-# VIM
-ln -s $(pwd)/.tomes/conf/vimrc.conf $HOME/.vimrc
+# EMACS
+ln -s $(pwd)/.tomes/conf/emacs/ $HOME/.emacs.d/
 if [ $? -eq 0 ]; then
-    echo $(tput setaf ${GRE}) " -> Created VIMRC symlink"
+    echo $(tput setaf ${GRE}) " -> Created EMACS symlink"
 else
-    echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not create VIMRC symlink! Aborting..."
+    echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not create EMACS symlink! Aborting..."
     rm $HOME/.zshrc
-    exit 1
-fi
-ln -s $(pwd)/.tomes/conf/vim/ $HOME/.vim
-if [ $? -eq 0 ]; then
-    echo $(tput setaf ${GRE}) " -> Created VIM symlink"
-else
-    echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not create VIM symlink! Aborting..."
-    rm $HOME/.zshrc
-    rm $HOME/.vimrc
     exit 1
 fi
 
@@ -86,8 +77,7 @@ if [ $? -eq 0 ]; then
 else
     echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not create GITCONFIG symlink! Aborting..."
     rm $HOME/.zshrc
-    rm $HOME/.vimrc
-    rm -R $HOME/.vim
+    rm -R $HOME/.emacs.d/
 fi
 
 ### Install GOLANG
