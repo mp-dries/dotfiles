@@ -61,7 +61,7 @@ else
 fi
 
 # EMACS
-ln -s $(pwd)/.tomes/conf/emacs $HOME/.emacs.d
+ln -s $(pwd)/.tomes/conf/emacs/ $HOME/.emacs.d
 if [ $? -eq 0 ]; then
     echo $(tput setaf ${GRE}) " -> Created EMACS symlink"
 else
