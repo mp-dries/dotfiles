@@ -139,10 +139,21 @@ if [[ ! $(which go) ]]; then
         exit 1
     fi
 
-
+    # make go directories 
     mkdir -p $HOME/go/{bin,src,pkg}
     if [ $? -ne 0 ]; then
         echo "Making Go directories failed! Aborting..."
+        exit 1
+    fi
+
+    echo
+    echo "Installing additional go tools (godoc, etc)..."
+    echo
+
+    # install additional go tools
+    go get golang.org/x/tools/cmd/...
+    if [ $? -ne 0 ]; then
+        echo "Installing additional go tools failed! Aborting..."
         exit 1
     fi
 
