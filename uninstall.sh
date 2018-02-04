@@ -39,13 +39,21 @@ if [[ "$(readlink -- "$HOME/.vim")" = ${HOME}/.tomes/conf/vim/ ]]; then
     fi
 fi
 
-# .GITCONFIG
+# .GIT
 if [[ "$(readlink -- "$HOME/.gitconfig")" = ${HOME}/.tomes/conf/gitconfig.conf ]]; then
     rm $HOME/.gitconfig
     if [ $? -eq 0 ]; then
         echo $(tput setaf ${GRE}) " -> Deleted GITCONFIG symlink"
     else
         echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not delete GITCONFIG symlink!"
+    fi
+fi
+if [[ "$(readlink -- "$HOME/.gitignore_global")" = ${HOME}/.tomes/conf/gitignore.conf ]]; then
+    rm $HOME/.gitignore_global
+    if [ $? -eq 0 ]; then
+        echo $(tput setaf ${GRE}) " -> Deleted GITIGNORE symlink"
+    else
+        echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not delete GITIGNORE symlink!"
     fi
 fi
 
