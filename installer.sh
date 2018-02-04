@@ -86,7 +86,20 @@ if [ $? -eq 0 ]; then
 else
     echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not create GITCONFIG symlink! Aborting..."
     rm $HOME/.zshrc
-    rm -R $HOME/.emacs.d/
+    rm -R $HOME/.vimrc
+    rm -R $HOME/.vim/
+    exit 1
+fi
+ln -s $(pwd)/.tomes/conf/gitignore.conf $HOME/.gitignore_global
+if [ $? -eq 0 ]; then
+    echo $(tput setaf ${GRE}) " -> Created GITIGNORE symlink"
+else
+    echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not create GITIGNORE symlink! Aborting..."
+    rm $HOME/.zshrc
+    rm -R $HOME/.vimrc
+    rm -R $HOME/.vim/
+    rm -R $HOME/.gitconfig
+    exit 1
 fi
 
 ### Install GOLANG
