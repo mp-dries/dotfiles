@@ -3,6 +3,7 @@
 #-------------------------------
 
 alias zshconf='vim $HOME/.zshrc'
+alias vimconf='vim $HOME/.vimrc'
 
 #-------------------------------
 #           MOBILITY
