@@ -4,6 +4,8 @@
 
 alias zshconf='vim $HOME/.zshrc'
 alias vimconf='vim $HOME/.vimrc'
+alias tmuxconf='vim $HOME/.tmux.conf'
+alias aliasconf='vim $HOME/.tomes/conf/zsh/aliases.zsh'
 
 #-------------------------------
 #           MOBILITY
