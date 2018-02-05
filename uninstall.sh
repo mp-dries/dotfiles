@@ -57,6 +57,16 @@ if [[ "$(readlink -- "$HOME/.gitignore_global")" = ${HOME}/.tomes/conf/gitignore
     fi
 fi
 
+# .TMUX.CONF
+if [ "$(readlink -- "$HOME/.tmux.conf")" = ${HOME}/.tomes/conf/tmux.conf ]; then
+    rm -R $HOME/.tmux.conf
+    if [ $? -eq 0 ]; then
+        echo $(tput setaf ${GRE}) " -> Deleted TMUX.CONF symlink"
+    else
+        echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not delete TMUX.CONF symlink!"
+    fi
+fi
+
 # Ask if Go must be removed
 tput setaf ${WHI}
 read -p "Do you wish to uninstall Go? (y/n) " UNINSTALLGO
