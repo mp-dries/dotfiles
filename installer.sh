@@ -58,11 +58,20 @@ echo "Creating the necessary symlinks..."
 echo
 
 # ZSH
-ln -s $(pwd)/.tomes/conf/zshrc.conf $HOME/.zshrc
+ln -s $(pwd)/.tomes/conf/zsh/zshrc.conf $HOME/.zshrc
 if [ $? -eq 0 ]; then
     echo $(tput setaf ${GRE}) " -> Created ZSHRC symlink"
 else
     echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not create ZSHRC symlink! Aborting..."
+    exit 1
+fi
+
+# ZSH TOMES THEME
+ln -s $(pwd)/.tomes/conf/zsh/tomes.zsh-theme $HOME/.oh-my-zsh/themes/tomes.zsh-theme
+if [ $? -eq 0 ]; then
+    echo $(tput setaf ${GRE}) " -> Created ZSH TOMES THEME symlink"
+else
+    echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not create ZSH TOMES THEME symlink! Aborting..."
     exit 1
 fi
 
