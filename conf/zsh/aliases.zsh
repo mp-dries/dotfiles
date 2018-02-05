@@ -2,7 +2,7 @@
 #	    GENERAL
 #-------------------------------
 
-
+alias zshconf='vim $HOME/.zshrc'
 
 #-------------------------------
 #           MOBILITY
