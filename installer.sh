@@ -44,6 +44,12 @@ if [[ ! $(which git) ]]; then
     exit 1
 fi
 
+# TMUX
+if [[ ! $(which tmux) ]]; then
+    echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "TMUX must be installed"
+    exit 1
+fi
+
 
 ### Make symlinks
 
@@ -101,6 +107,21 @@ else
     rm -R $HOME/.gitconfig
     exit 1
 fi
+
+# TMUX
+ln -s $(pwd)/.tomes/conf/tmux.conf $HOME/.tmux.conf
+if [ $? -eq 0 ]; then
+    echo $(tput setaf ${GRE}) " -> Created TMUX.CONF symlink"
+else
+    echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not create TMUX.CONF symlink! Aborting..."
+    rm $HOME/.zshrc
+    rm -R $HOME/.vimrc
+    rm -R $HOME/.vim/
+    rm -R $HOME/.gitconfig
+    rm -R $HOME/.gitignore
+    exit 1
+fi
+
 
 ### Install GOLANG
 
