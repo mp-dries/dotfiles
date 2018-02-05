@@ -10,12 +10,22 @@ echo "Deleting symlinks..."
 echo
 
 # .ZSHRC
-if [ "$(readlink -- "$HOME/.zshrc")" = ${HOME}/.tomes/conf/zshrc.conf ]; then
+if [ "$(readlink -- "$HOME/.zshrc")" = ${HOME}/.tomes/conf/zsh/zshrc.conf ]; then
     rm $HOME/.zshrc
     if [ $? -eq 0 ]; then
         echo $(tput setaf ${GRE}) " -> Deleted ZSHRC symlink"
     else
         echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not delete ZSHRC symlink!"
+    fi
+fi
+
+# ZSH TOMES THEME
+if [ "$(readlink -- "$HOME/.oh-my-zsh/themes/tomes.zsh-theme")" = ${HOME}/.tomes/conf/zsh/tomes.zsh-theme ]; then
+    rm $HOME/.oh-my-zsh/themes/tomes.zsh-theme
+    if [ $? -eq 0 ]; then
+        echo $(tput setaf ${GRE}) " -> Deleted ZSH TOMES THEME symlink"
+    else
+        echo $(tput setaf ${RED}) "ERROR:" $(tput setaf ${WHI}) "Could not delete ZSH TOMES THEME symlink!"
     fi
 fi
 
