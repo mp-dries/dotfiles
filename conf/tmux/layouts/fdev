@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Front-end Development layout
+
+tmux new-session -s 'FE Dev'
+tmux split-window -h -p 25
+if [ -f ./gulpfile.js ]; then
+        tmux select-pane 1
+        tmux send-keys 'gulp' C-m
+fi
+
+tmux split-pane -v -p 50
+
+tmux select-pane -t 1
+tmux split-pane -v -p 50
+
+tmux select-pane -t 0
+vim
