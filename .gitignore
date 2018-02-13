@@ -2,3 +2,4 @@
 .idea/
 *.DS_Store
 conf/vim/bundle/*
+.env
