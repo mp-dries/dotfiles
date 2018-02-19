@@ -3,3 +3,4 @@
 *.DS_Store
 conf/vim/bundle/*
 .env
+.netrwhist
