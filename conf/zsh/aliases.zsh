@@ -66,3 +66,8 @@ alias cdvg='cd $VGRDIR'
 alias vgup='cd $VGRDIR && vagrant up'
 alias vgdown='cd $VGRDIR && vagrant halt'
 alias tovg='cd $VGRDIR && vagrant ssh'
+
+#-------------------------------
+#            SCRIPTS
+#-------------------------------
+alias arch='archivist'
