@@ -7,11 +7,11 @@ Install by running one of the following commands in your terminal. You can insta
 #### via curl
 
 ```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/drieshooghe/tomes/master/installer.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/drieshooghe/tomes/master/install.sh)"
 ```
 
 #### via wget
 
 ```shell
-sh -c "$(wget https://raw.githubusercontent.com/drieshooghe/tomes/master/installer.sh -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/drieshooghe/tomes/master/install.sh -O -)"
 ```
