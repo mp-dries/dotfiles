@@ -1,0 +1,10 @@
+# Directories
+ZSH=$HOME/.oh-my-zsh
+SCRIPTDIR=$HOME/Development/scripts
+VGRDIR=$HOME/das-machine
+# Terminal settings
+TERM=xterm-256color
+CLICOLOR=1
+LSCOLORS=Gxfxcxdxbxegedabagacad
+# Set editor
+EDITOR=vim

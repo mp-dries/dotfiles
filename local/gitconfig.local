@@ -1,0 +1,37 @@
+[user]
+	name = Dries Hooghe
+	email = dries@dasmedia.be
+	
+[core]
+	excludesfile = $HOME/.gitignore_global
+
+[alias]
+	# log log
+	ll = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+	
+	# log graphic
+	lg = log --graph --oneline --decorate --all
+	
+	# log full
+	lf = log -p -1
+
+	# log my commits of today
+	lt = log --since='1am' --format='%C(cyan)%h%Creset — %an (%ar) %C(green)%s%Creset' --author="$(git config user.name)"
+
+	# log my commits on date
+	lo = log --after=\"$1 0:00\" --before=\"$1 23:59\" --format='%C(cyan)%h%Creset — %an (%ar) %C(green)%s%Creset' --author="$(git config user.name)"
+
+	# log since (amount of days)	
+	lsd = "!f() { \
+        git log --after=\"$(date -j -v-$1d +%Y-%m-%d)\" --oneline; \
+    }; f"
+
+	
+	
+	
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

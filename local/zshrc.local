@@ -9,14 +9,14 @@ while read p; do
     else
         export PATH=${p}:$PATH
     fi
-done < $DOTFILES/local/zsh/paths.conf
+done < $DOTFILES/local/zsh/paths
 
 # Export other variables
 while read p; do
     if [[ ${p:0:1} != '#' ]]; then
 	export ${p/'$HOME'/$HOME}	
     fi
-done < $DOTFILES/local/zsh/variables.conf
+done < $DOTFILES/local/zsh/variables
 
 # Export hidden variables
 if [[ -f $DOTFILES/local/.env ]]; then
@@ -54,7 +54,9 @@ ZSH_TMUX_AUTOQUIT=false
 #-------------------------------
 
 # Set theme
-ZSH_THEME=tomes
+ZSH_THEME="robbyrussell"
+local ret_status="%(?:%{$fg_bold[green]%}λ :%{$fg_bold[red]%}λ )"
+PROMPT='${ret_status} %{$fg[green]%}%c %{$fg[black]%}» %{$reset_color%}'
 
 # Enable plugins
 ZSH_THEME_GIT_PROMPT=false
