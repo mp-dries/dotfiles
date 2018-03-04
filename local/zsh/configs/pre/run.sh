@@ -12,17 +12,17 @@ function run {
 
   if [ "$verbose" = true ]; then
     if [ ! -z "$description" ]; then
-      printn info "$description"
+      cprint info "$description"
     fi
-    printn "Running: $command"
+    cprint "Running: $command"
 
     eval $command
     local exit_code=$?
 
     if [ $exit_code -eq 0 ]; then
-      printn success "Finished $description"
+      cprint success "Finished $description"
     else
-      printn error "Failed $description"
+      cprint error "Failed $description"
     fi
 
   else
@@ -64,10 +64,10 @@ function run {
     local exit_code=$?
 
     if [ $exit_code -eq 0 ]; then
-      printn success "Finished $description"
+      cprint success "Finished $description"
     else
       cat "$output_file"
-      printn error "Failed $description"
+      cprint error "Failed $description"
     fi
     rm -f "$output_file"
 
