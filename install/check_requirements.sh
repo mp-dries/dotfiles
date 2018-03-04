@@ -31,8 +31,3 @@ fi
 if ! which rcup > /dev/null; then
   cprint error "RCM must be installed (see https://github.com/thoughtbot/rcm)"
 fi
-
-# cmake
-if ! which cmake > /dev/null; then
-  cprint error "CMAKE must be installed"
-fi
