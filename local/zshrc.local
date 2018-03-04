@@ -47,19 +47,16 @@ fi
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOSTART_ONCE=true
 ZSH_TMUX_FIXTERM=true
-ZSH_TMUX_AUTOQUIT=false
+ZSH_TMUX_AUTOQUIT=true
 
 #-------------------------------
 #           ZSH
 #-------------------------------
 
-# Set theme
+# Theme
 ZSH_THEME="robbyrussell"
-local ret_status="%(?:%{$fg_bold[green]%}λ :%{$fg_bold[red]%}λ )"
-PROMPT='${ret_status} %{$fg[green]%}%c %{$fg[black]%}» %{$reset_color%}'
 
 # Enable plugins
-ZSH_THEME_GIT_PROMPT=false
 plugins=(z tmux)
 
 # Source zsh and personal configuration
