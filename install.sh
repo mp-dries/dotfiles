@@ -4,8 +4,8 @@
 git clone https://github.com/drieshooghe/tomes.git $HOME/.tomes
 
 # Source variables and functions required for installer
-for f in $HOME/.tomes/local/zsh/configs/pre*; do
-  source "$f"
+for f in $HOME/.tomes/local/zsh/configs/pre/; do
+  source $f
 done
 
 # Check requirements
