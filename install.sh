@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
-# Env
-CURRENT_DIR="$( cd "$(dirname "$0")" ; pwd -P )"
+# Set the project directory
+# If you wish to change this directory, also alter the declaration in /local/zsh/configs/pre/env.sh
+$DOTFILES=$HOME/.tomes
+
+# Clone the project
+git clone https://github.com/drieshooghe/tomes.git $DOTFILES
 
 # Source variables and functions required for installer
-for f in "$CURRENT_DIR/local/zsh/configs/pre/"*; do
+for f in "$DOTFILES/local/zsh/configs/pre/"*; do
   source "$f"
 done
-
-# Go to home directory
-cd $HOME
-git clone https://github.com/drieshooghe/tomes.git $DOTFILES
 
 # Check requirements
 source "$DOTFILES/install/check_requirements"
