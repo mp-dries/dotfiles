@@ -24,7 +24,7 @@ if [[ -f $DOTFILES/local/.env ]]; then
                 if [[ ${p:0:1} != '#' ]]; then
                         export ${p/'$HOME'/$HOME}
                 fi
-        done < $DOTFILES/.env
+        done < $DOTFILES/local/.env
 fi
 
 # Export Golang variables if Go is installed
