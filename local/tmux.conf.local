@@ -14,6 +14,7 @@
 #       2. Settings
 #               2.1 General
 #               2.2 Status bar modifications
+#               2.3 Color scheme
 #               2.X Misc
 #       3. Mappings
 #               3.1 Tmux mappings
@@ -44,7 +45,6 @@
                 # show session name, window & pane number on the right side
                 set -g status-right-length 90
                 set -g status-right "#(cd #{pane_current_path}; basename $(git rev-parse --show-toplevel)) ➜ #(cd #{pane_current_path}; basename $(git rev-parse --abbrev-ref HEAD))"
-
                 # default statusbar colors
                 set-option -g status-bg colour236  # black 235
                 set-option -g status-fg colour74   # orange 173
@@ -64,9 +64,6 @@
                 # pane number display
                 set-option -g display-panes-active-colour green
                 set-option -g display-panes-colour blue
-# modes
-setw -g mode-attr bold
-setw -g mode-fg colour13
 
 # 3. Mappings
         # 3.1 Tmux specific mappings
