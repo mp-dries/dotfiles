@@ -110,5 +110,5 @@ ZSH_THEME_GIT_PROMPT_DIRTY='%Uλ%u'
 ZSH_THEME_GIT_PROMPT_CLEAN='λ'
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[grey]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-PROMPT='%(?,%{$fg[green]%},%{$fg[red]%})$(parse_git_dirty) %{$reset_color%}'
+PROMPT='%(?,%{$fg[green]%},%{$fg[red]%}) $(parse_git_dirty) %{$reset_color%}'
 RPROMPT='%{$fg[grey]%}$(minutes_since_commit)%{$reset_color%}'
