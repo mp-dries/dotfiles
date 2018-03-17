@@ -33,6 +33,8 @@
         " 2.1 General Settings
                 filetype on
                 syntax enable
+                let dart_html_in_string=v:true "Enable HTML syntax highlighting inside Dart strings
+                let dart_style_guide = 2 "enable Dart style guide syntax
 
         " 2.2 User interface
                 set nowrap
