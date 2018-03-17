@@ -1,16 +1,17 @@
-# My tomes configuration
+# Dotfiles config
+My personal zsh, vim, git and tmux configuration.
 
 ### Basic Installation
 
-Install by running one of the following commands in your terminal. You can install this via the command-line with either `curl` or `wget`.
+Go to the directory where you want to install these dotfiles and install by running one of the following commands in your terminal.
 
-#### via curl
+#### Using curl
 
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/drieshooghe/tomes/master/install.sh)"
 ```
 
-#### via wget
+#### Using wget
 
 ```shell
 sh -c "$(wget https://raw.githubusercontent.com/drieshooghe/tomes/master/install.sh -O -)"
