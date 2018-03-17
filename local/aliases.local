@@ -19,9 +19,8 @@ alias cdscr='cd $SCRIPTDIR'
 alias cdvgr='cd $HOME/das-machine'
 alias cddev='cd $HOME/Development'
 alias cdweb='cd $HOME/Development/web'
-alias cdgo='cd $HOME/go'
-alias cdgodh='cd $HOME/go/src/github.com/drieshooghe'
-alias cdot='cd $DOTFILES'
+alias cdpj='cd $PROJECT_DIR'
+alias cddf='cd $DOTFILES'
 
 
 #-------------------------------
