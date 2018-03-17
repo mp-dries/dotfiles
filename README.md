@@ -17,7 +17,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/drieshooghe/tomes/master/i
 sh -c "$(wget https://raw.githubusercontent.com/drieshooghe/tomes/master/install.sh -O -)"
 ```
 
-### Acknowledgement
+### Acknowledgements
+
 Credit where credit is due.
-In v2 a lot of the installation logic is based on the [dotfiles repo of Lowie Huyghe](https://github.com/LowieHuyghe/dotfiles)
+In v2 a lot of the installation logic is based on the [dotfiles repo of Lowie Huyghe](https://github.com/LowieHuyghe/dotfiles).
+
 The dotfiles configuration itself is an extension of the [thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles).
