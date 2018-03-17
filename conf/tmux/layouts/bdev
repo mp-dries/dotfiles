@@ -1,7 +1,0 @@
-# Front-end Development layout
-select -t 0
-splitw -v -p 80
-
-selectp -t 1
-splitw -h -p 66
-splitw -h -p 33
