@@ -3,7 +3,7 @@ My personal zsh, vim, git and tmux configuration.
 
 ### Basic Installation
 
-Go to the directory where you want to install these dotfiles and install by running one of the following commands in your terminal.
+Go to the directory where you want to install these dotfiles and install by running one of the following commands in your terminal. IMPORTANT: Do not run this command in your home directory, that is where the thoughtbot dotfiles directory will be installed.
 
 #### Using curl
 
