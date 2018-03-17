@@ -4,7 +4,7 @@
 
 # Check if the specified dotfiles directoryname is not $HOME/dotfiles
 if [ "$DOTFILES" == "$HOME/dotfiles" ]; then
-  cprint error "Thoughtbot's dotfiles directory is already named dotfiles, specify a different directory"
+  cprint error "Thoughtbot's dotfiles directory is already named dotfiles. Please install somewhere else. You will have to delete the cloned directory with 'sudo rm -r $HOME/dotfiles' before attemtping to reinstall"
   exit 1
 fi
 
