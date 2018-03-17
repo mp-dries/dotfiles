@@ -1,6 +1,4 @@
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } "Install as a command line utility
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'tpope/vim-vinegar' "File explorer
 Plug 'itchyny/lightline.vim' "Status bar modification
 Plug 'KeitaNakamura/neodark.vim' "Flat color theme
 Plug 'dart-lang/dart-vim-plugin' "Dartlang support
