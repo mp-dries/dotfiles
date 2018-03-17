@@ -4,3 +4,4 @@
 conf/vim/bundle/*
 .env
 local/zsh/configs/pre/dotfile-dir.sh
+lib/secrets

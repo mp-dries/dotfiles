@@ -21,7 +21,7 @@ alias cddev='cd $HOME/Development'
 alias cdweb='cd $HOME/Development/web'
 alias cdgo='cd $HOME/go'
 alias cdgodh='cd $HOME/go/src/github.com/drieshooghe'
-alias cdtom='cd $HOME/.tomes'
+alias cdot='cd $DOTFILES'
 
 
 #-------------------------------
