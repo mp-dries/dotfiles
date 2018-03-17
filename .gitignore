@@ -3,4 +3,4 @@
 *.DS_Store
 conf/vim/bundle/*
 .env
-.netrwhist
+local/zsh/configs/pre/dotfile-dir.sh
