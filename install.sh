@@ -21,3 +21,5 @@ source "$DOTFILE_DIR/install/thoughtbot.sh"
 
 # VIM setup
 source "$DOTFILE_DIR/install/vim.sh"
+
+echo
