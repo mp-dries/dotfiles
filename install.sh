@@ -1,27 +1,22 @@
 #!/usr/bin/env bash
 
-# Clone the project
-git clone https://github.com/drieshooghe/tomes.git $HOME/.tomes
+# Clone the project to the current directory
+DOTFILE_DIR="$( cd "$(dirname "$0")" ; pwd -P )/dotfiles"
+git clone https://github.com/drieshooghe/tomes.git $DOTFILE_DIR
 
 # Source variables and functions required for installer
-for f in "$HOME/.tomes/local/zsh/configs/pre/"*; do
+for f in "$DOTFILE_DIR/local/zsh/configs/pre/"*; do
   source "$f"
 done
 
 # Check requirements
-source "$DOTFILES/install/check_requirements.sh"
+source "$DOTFILE_DIR/install/check_requirements.sh"
 
 # ZSH setup
-source "$DOTFILES/install/zsh.sh"
+source "$DOTFILE_DIR/install/zsh.sh"
 
 # Thoughtbot dotfiles setup
-source "$DOTFILES/install/thoughtbot.sh"
+source "$DOTFILE_DIR/install/thoughtbot.sh"
 
 # VIM setup
-source "$DOTFILES/install/vim.sh"
-
-# (optional) GO installer
-source "$DOTFILES/install/go-installer.sh"
-
-# (optional) GO archivist
-source "$DOTFILES/install/go-archivist.sh"
+source "$DOTFILE_DIR/install/vim.sh"
