@@ -31,12 +31,6 @@ rcup
 lsrc
 ```
 
-#### Remove
-
-```shell
-rcdn
-```
-
 ### Acknowledgements
 
 Credit where credit is due.
