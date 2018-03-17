@@ -8,13 +8,13 @@ Go to the directory where you want to install these dotfiles and install by runn
 #### Using curl
 
 ```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/drieshooghe/tomes/master/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/drieshooghe/dotfiles/master/install.sh)"
 ```
 
 #### Using wget
 
 ```shell
-sh -c "$(wget https://raw.githubusercontent.com/drieshooghe/tomes/master/install.sh -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/drieshooghe/dotfiles/master/install.sh -O -)"
 ```
 
 ### Acknowledgements
