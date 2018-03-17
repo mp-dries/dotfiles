@@ -17,6 +17,26 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/drieshooghe/dotfiles/maste
 sh -c "$(wget https://raw.githubusercontent.com/drieshooghe/dotfiles/master/install.sh -O -)"
 ```
 
+### Managing configuration
+
+Since this configuration is based on thoughtbot's dotfiles, you can use the [management suite](https://github.com/thoughtbot/rcm) it comes with.
+
+#### Update
+```shell
+rcup
+```
+
+#### List dotfiles
+```shell
+lsrc
+```
+
+#### Remove
+
+```shell
+rcdn
+```
+
 ### Acknowledgements
 
 Credit where credit is due.
