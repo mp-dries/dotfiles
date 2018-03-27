@@ -2,3 +2,5 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'itchyny/lightline.vim' "Status bar modification
 Plug 'KeitaNakamura/neodark.vim' "Flat color theme
 Plug 'dart-lang/dart-vim-plugin' "Dartlang support
+Plug 'fatih/vim-go' "Golang support
+
