@@ -11,10 +11,10 @@ fi
 
 # Export Golang variables if Go is installed
 if [[ -d "/usr/local/go" ]]; then
-    export GOROOT=/usr/local/go
-    export PATH=$PATH:$GOROOT/bin
-    export GOPATH=$PROJECT_DIR/go
-    export PATH=$PATH:$GOPATH/bin
+  export GOROOT=/usr/local/go
+  export PATH=$PATH:$GOROOT/bin
+  export GOPATH=$PROJECT_DIR/go
+  export PATH=$PATH:$GOPATH/bin
 fi
 
 #-------------------------------
@@ -51,3 +51,19 @@ ZSH_THEME_GIT_PROMPT_CLEAN='λ'
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[grey]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 PROMPT='%(?,%{$fg[green]%},%{$fg[red]%}) $(parse_git_dirty) %{$reset_color%}'
+
+# Export PATH variables
+while read p; do
+  if [[ ${p:0:5} == '$HOME' ]]; then
+    export PATH=${HOME}${p:5}:$PATH
+  else
+    export PATH=${p}:$PATH
+  fi
+done < $DOTFILES/local/zsh/paths
+
+# Export other variables
+while read p; do
+  if [[ ${p:0:1} != '#' ]]; then
+    export ${p/'$HOME'/$HOME} 
+  fi
+done < $DOTFILES/local/zsh/variables

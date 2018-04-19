@@ -6,6 +6,7 @@ alias zshconf='vim $DOTFILES/local/zshrc.local'
 alias vimconf='vim $DOTFILES/local/vimrc.local'
 alias tmuxconf='vim $DOTFILES/local/tmux.conf.local'
 alias aliasconf='vim $DOTFILES/local/aliases.local'
+alias pathconf='vim $DOTFILES/local/zsh/paths'
 
 #-------------------------------
 #           MOBILITY
