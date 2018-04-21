@@ -14,23 +14,14 @@ function dep {
   browse | -b launch a browser and view the remote app"
 
   case "${cmd}" in
-    "local|-l")
-      run "${VERBOSE}" \
-        "dev_appserver.py app.yaml" \
-        "Running app locally" \
-        "true"
+    "local"|"-l")
+        dev_appserver.py app.yaml
       ;;
-    "deploy|-d")
-      run "${VERBOSE}" \
-        "gcloud app deploy" \
-        "Deploying app" \
-        "true"
+    "deploy"|"-d")
+        gcloud app deploy
       ;;
-    "browse|-b")
-      run "${VERBOSE}" \
-        "gcloud app browse" \
-        "Going to remote app" \
-        "true"
+    "browse"|"-b")
+        gcloud app browse
       ;;
     *)
       cprint "${usage}"
