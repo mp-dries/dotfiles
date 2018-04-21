@@ -56,6 +56,8 @@ PROMPT='%(?,%{$fg[green]%},%{$fg[red]%}) $(parse_git_dirty) %{$reset_color%}'
 while read p; do
   if [[ ${p:0:5} == '$HOME' ]]; then
     export PATH=${HOME}${p:5}:$PATH
+  elif [[ ${p:0:9} == '$DOTFILES' ]]; then
+    export PATH=${DOTFILES}${p:9}:$PATH
   else
     export PATH=${p}:$PATH
   fi
@@ -67,3 +69,9 @@ while read p; do
     export ${p/'$HOME'/$HOME} 
   fi
 done < $DOTFILES/local/zsh/variables
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/Dries/.google-cloud-sdk/path.zsh.inc' ]; then source '/Users/Dries/.google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/Dries/.google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/Dries/.google-cloud-sdk/completion.zsh.inc'; fi

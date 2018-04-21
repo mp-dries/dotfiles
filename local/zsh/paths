@@ -1,4 +1,4 @@
 $HOME/Development/scripts
 $HOME/.flutterSDK/bin
-
-
+$HOME/.google-cloud-sdk
+$DOTFILES/lib/scripts
