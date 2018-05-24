@@ -74,6 +74,8 @@
                 unbind-key C-a
                 bind-key C-a send-prefix
                 set -g base-index 1
+                # Use system clipboard
+                bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
                 # easily reload tmux conf
                 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"#
         # 3.2 Vim - Tmux pane mappings
