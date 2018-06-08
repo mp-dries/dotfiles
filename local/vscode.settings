@@ -1,5 +1,6 @@
 {
     "go.gopath": "/Users/Dries/Projects/go",
     "team.showWelcomeMessage": false,
-    "workbench.colorTheme": "Monokai Dimmed"
+    "workbench.colorTheme": "Monokai Dimmed",
+    "vim.history": 100,
 }
