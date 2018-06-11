@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Function
-function goto {
+goto () {
         if [[ "$#" -eq 2 ]]; then
                 echo "Trying to reach ${1}@${2}"
                 ssh ${1}@${2}
