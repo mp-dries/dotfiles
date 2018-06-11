@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Clone the project to the current directory
 DOTFILE_DIR="$( cd "$(dirname '$0')" ; pwd -P )/dotfiles"
