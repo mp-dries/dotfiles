@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function dep {
+dep () {
 
   local cmd="$1"
 
