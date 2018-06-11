@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-export SECRETS_DIR=$DOTFILES/lib/secrets
-export PROJECT_DIR=$HOME/Projects
+export SECRETS_DIR=$DOTFILE_DIR/lib/secrets
+export PROJECT_DIR=$HOME/Dev
