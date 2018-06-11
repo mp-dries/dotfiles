@@ -7,7 +7,8 @@ echo '#!/usr/bin/env/ bash\n\nexport DOTFILES="'$DOTFILE_DIR'"' > $DOTFILE_DIR/l
 
 # Source variables and functions required for installer
 for f in $DOTFILE_DIR/local/zsh/configs/pre/*; do
-  source "$f"
+  echo $f
+  source $f
 done
 
 # Check requirements
