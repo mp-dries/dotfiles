@@ -7,22 +7,22 @@ echo '#!/usr/bin/env/ bash\n\nexport DOTFILES="'$DOTFILE_DIR'"' > $DOTFILE_DIR/l
 
 # Source variables and functions required for installer
 for f in "$DOTFILE_DIR/local/zsh/configs/pre/"*; do
-  . "$f"
+  source "$f"
 done
 
 # Check requirements
-. "$DOTFILE_DIR/install/check_requirements.sh"
+source "$DOTFILE_DIR/install/check_requirements.sh"
 
 # ZSH setup
-. "$DOTFILE_DIR/install/zsh.sh"
+source "$DOTFILE_DIR/install/zsh.sh"
 
 # Thoughtbot dotfiles setup
-. "$DOTFILE_DIR/install/thoughtbot.sh"
+source "$DOTFILE_DIR/install/thoughtbot.sh"
 
 # VIM setup
-. "$DOTFILE_DIR/install/vim.sh"
+source "$DOTFILE_DIR/install/vim.sh"
 
 # Install secrets
-. "$DOTFILE_DIR/install/secrets.sh"
+source "$DOTFILE_DIR/install/secrets.sh"
 
 echo
