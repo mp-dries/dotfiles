@@ -1,20 +1,24 @@
 # Dotfiles config
 My personal zsh, vim, git and tmux configuration.
 
+### Prerequisites
+- Bash
+- ZSH
+
 ### Basic Installation
 
 Go to the directory where you want to install these dotfiles and install by running one of the following commands in your terminal. IMPORTANT: Do not run this command in your home directory, that is where the thoughtbot dotfiles directory will be installed.
 
 #### Using curl
 
-```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/drieshooghe/dotfiles/master/install.sh)"
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/drieshooghe/dotfiles/master/install.sh)"
 ```
 
 #### Using wget
 
-```shell
-sh -c "$(wget https://raw.githubusercontent.com/drieshooghe/dotfiles/master/install.sh -O -)"
+```bash
+bash -c "$(wget https://raw.githubusercontent.com/drieshooghe/dotfiles/master/install.sh -O -)"
 ```
 
 ### Managing configuration
@@ -22,12 +26,12 @@ sh -c "$(wget https://raw.githubusercontent.com/drieshooghe/dotfiles/master/inst
 Since this configuration is based on thoughtbot's dotfiles, you can use the [management suite](https://github.com/thoughtbot/rcm) it comes with.
 
 #### Update
-```shell
+```bash
 rcup
 ```
 
 #### List dotfiles
-```shell
+```bash
 lsrc
 ```
 
