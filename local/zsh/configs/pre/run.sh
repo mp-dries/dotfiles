@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Function
-run () {
+function run {
 
   # Arguments
   local verbose="$1"
