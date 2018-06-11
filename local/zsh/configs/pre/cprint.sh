@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Function
-cprint () {
+function cprint {
 
   # Arguments
   local type="$1"
