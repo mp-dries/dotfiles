@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Clone the project to the current directory
-DOTFILE_DIR="$( cd "$(dirname -- $0)" ; pwd -P )/dotfiles"
+DOTFILE_DIR="$( cd "$(dirname '$0')" ; pwd -P )/dotfiles"
 git clone https://github.com/drieshooghe/tomes.git $DOTFILE_DIR
 echo '#!/usr/bin/env/ bash\n\nexport DOTFILES="'$DOTFILE_DIR'"' > $DOTFILE_DIR/local/zsh/configs/pre/dotfile-dir.sh
 
