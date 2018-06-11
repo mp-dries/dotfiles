@@ -3,7 +3,6 @@ My personal zsh, vim, git and tmux configuration.
 
 ### Prerequisites
 - Bash
-- ZSH
 
 ### Basic Installation
 
