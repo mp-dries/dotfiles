@@ -7,6 +7,7 @@ My personal zsh, vim, git and tmux configuration.
 - ZSH
 - VIM
 - TMUX
+- RCM
 
 ### Basic Installation
 
