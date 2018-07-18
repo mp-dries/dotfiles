@@ -3,6 +3,8 @@
 # Clone the project to the current directory
 DOTFILE_DIR="$( cd "$(dirname '$0')" ; pwd -P )/dotfiles"
 git clone https://github.com/drieshooghe/dotfiles.git $DOTFILE_DIR
+cp $DOTFILE_DIR/local/zsh/configs/pre/dotfile-dir.temp
+$DOTFILE_DIR/local/zsh/configs/pre/dotfile-dir.sh
 echo 'export DOTFILES="'$DOTFILE_DIR'"' >> $DOTFILE_DIR/local/zsh/configs/pre/dotfile-dir.sh
 
 # Source variables and functions required for installer
