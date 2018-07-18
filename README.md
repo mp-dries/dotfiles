@@ -2,7 +2,8 @@
 My personal zsh, vim, git and tmux configuration.
 
 ### Prerequisites
-- Bash
+- BASH
+- GIT
 - ZSH
 - VIM
 - TMUX
