@@ -24,6 +24,6 @@ source "$DOTFILE_DIR/install/thoughtbot.sh"
 source "$DOTFILE_DIR/install/vim.sh"
 
 # Install secrets
-source "$DOTFILE_DIR/install/secrets.sh"
+# source "$DOTFILE_DIR/install/secrets.sh"
 
 echo
